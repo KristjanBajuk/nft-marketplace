@@ -52,8 +52,9 @@ const App = () => {
     }
 
     const mint =  (kryptoBird) => {
-      contract.methods.mint(kryptoBird).send({from: account}).on('confirmation', receipt => {
+      contract.methods.mint(kryptoBird).send({from: account}).once('confirmation', receipt => {
             setKryptoBirds(prevValue => [...prevValue, kryptoBird]);
+            inputRef.current.value = '';
         });
     }
 
