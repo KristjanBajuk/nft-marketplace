@@ -15,7 +15,6 @@ const App = () => {
 
     const loadWeb3 = async () => {
         const provider = await detectEthereumProvider();
-
         if(provider) {
             console.log('Ethereum wallet is connected');
             window.web3 = new Web3(provider);
@@ -52,10 +51,10 @@ const App = () => {
         }
     }
 
-    const mint = (kryptoBird) => {
-        contract.methods.mint(kryptoBird).send({from: account}).once('receipt', receipt => {
+    const mint =  (kryptoBird) => {
+      contract.methods.mint(kryptoBird).send({from: account}).on('confirmation', receipt => {
             setKryptoBirds(prevValue => [...prevValue, kryptoBird]);
-        })
+        });
     }
 
     React.useEffect(async() => {
