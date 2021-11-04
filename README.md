@@ -1,3 +1,15 @@
+# tech-stack
+Solidity
+Ganache
+Truffle
+Web3
+React
+Javascript
+Bootstrap
+
+#token standards
+ERC721
+
 # nft-marketplace-starter-kit
 Please run npm install on the terminal to download the appropriate packages already defined to the package.json file. 
 Make sure you are in the source file. 
