@@ -7,7 +7,7 @@ React
 Javascript
 Bootstrap
 
-#token standards
+# token standards
 ERC721
 
 # nft-marketplace-starter-kit
